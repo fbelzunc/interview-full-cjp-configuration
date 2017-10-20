@@ -1,6 +1,6 @@
 # Decription
 
-The goal of this exercise is to connect an AD server with a CJP environment.
+The goal of this exercise is to connect an AD server with a CJP environment and set-up RBAC security.
 
 # Start the AD server
 
