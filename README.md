@@ -20,6 +20,9 @@ docker run -e "SAMBA_DOMAIN=SAMDOM" -e "SAMBA_REALM=SAMDOM.EXAMPLE.COM" -e "ROOT
 ldapsearch -LLL -H ldap://127.0.0.1:3268 -s subtree -b "cn=Users,dc=samdom,dc=example,dc=com" -D "cn=Administrator,cn=Users,dc=samdom,dc=example,dc=com" -w "Mypassword*2017" "(& (userPrincipalName=gogo@samdom.example.com)(objectCategory=user))
 ```
 
+References: 
+
+
 # Start Operations Center
 
 1. [Download the latest version of Operations Center](https://nectar-downloads.cloudbees.com/cjoc/rolling/war/2.73.2.1/jenkins-oc.war) and start it from command line with `java -DJENKINS_HOME=<PATH_TO_JENKINS_HOME> -jar jenkins-oc.war`.
@@ -28,6 +31,8 @@ ldapsearch -LLL -H ldap://127.0.0.1:3268 -s subtree -b "cn=Users,dc=samdom,dc=ex
 References: 
 
 * https://go.cloudbees.com/docs/cloudbees-documentation/cjoc-user-guide/
+* [How to diagnose AD integration problems?](https://support.cloudbees.com/hc/en-us/articles/218625237-How-to-diagnose-AD-integration-problems-)
+* [Cannot make my AD configuration to work](https://support.cloudbees.com/hc/en-us/articles/235932268-Cannot-make-my-AD-configuration-to-work)
 
 # Start Jenkins Master
 
@@ -38,6 +43,9 @@ References:
 1. From OC main dashboard you can use *Create Item -> Client Master*.
 2. In OC go to *Manage Jenkins -> Configure Global Security* and specify that you would like to use *Single Sign-On (security realm and authorization strategy)*
 3. Follow and **understand** [RBAC multiple configurations in a CJOC-CJE architecture](https://support.cloudbees.com/hc/en-us/articles/223657648-RBAC-multiple-configurations-in-a-CJOC-CJE-architecture)
+
+References:
+* https://go.cloudbees.com/docs/cloudbees-documentation/cjoc-user-guide/#security
 
 
 
