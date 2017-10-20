@@ -20,9 +20,6 @@ docker run -e "SAMBA_DOMAIN=SAMDOM" -e "SAMBA_REALM=SAMDOM.EXAMPLE.COM" -e "ROOT
 ldapsearch -LLL -H ldap://127.0.0.1:3268 -s subtree -b "cn=Users,dc=samdom,dc=example,dc=com" -D "cn=Administrator,cn=Users,dc=samdom,dc=example,dc=com" -w "Mypassword*2017" "(& (userPrincipalName=gogo@samdom.example.com)(objectCategory=user))
 ```
 
-References: 
-
-
 # Start Operations Center
 
 1. [Download the latest version of Operations Center](https://nectar-downloads.cloudbees.com/cjoc/rolling/war/2.73.2.1/jenkins-oc.war) and start it from command line with `java -DJENKINS_HOME=<PATH_TO_JENKINS_HOME> -jar jenkins-oc.war`.
@@ -36,7 +33,7 @@ References:
 
 # Start Jenkins Master
 
-1. [Download the latest version of the client masters](https://nectar-downloads.cloudbees.com/cjoc/rolling/war/2.73.2.1/jenkins-oc.war) and start it from command line with `java -DJENKINS_HOME=<PATH_TO_JENKINS_HOME> -jar jenkins.war`.
+1. [Download the latest version of the client masters](https://nectar-downloads.cloudbees.com/cje/rolling/war/2.73.2.1/jenkins-oc.war) and start it from command line with `java -DJENKINS_HOME=<PATH_TO_JENKINS_HOME> -jar jenkins.war`.
 
 # Connect the CM with OC and set-up security
 
